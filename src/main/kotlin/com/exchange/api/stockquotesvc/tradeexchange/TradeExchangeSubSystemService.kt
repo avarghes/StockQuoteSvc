@@ -1,6 +1,5 @@
 package com.exchange.api.stockquotesvc.tradeexchange
 
-import main.kotlin.com.exchange.api.stockquotesvc.tradeexchange.ITradeExchangeService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 

@@ -14,9 +14,6 @@ class StockQuoteDTO : Serializable {
     var description: CompanyDescription? = null
 
     companion object {
-        /**
-         *
-         */
         private const val serialVersionUID = 4692599796495022505L
     }
 }

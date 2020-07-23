@@ -36,7 +36,7 @@ class TradeExchange() {
 
     fun allTradedTicker(): List<CompanyDescription?> {
         val tradedTickerList: MutableList<CompanyDescription?> =
-            ArrayList()
+                ArrayList()
         stocksTradedOnExchange!!.forEach { (k: String?, v: CompanyDescription?) ->
             tradedTickerList.add(v)
         }
@@ -52,8 +52,8 @@ class TradeExchange() {
         description = CompanyDescription("APPLE", "Apple Inc", "Manufacturer of iPhones/Macs.")
         (stocksTradedOnExchange as HashMap<String, CompanyDescription?>)[description.tickerSymbol] = description
         description = CompanyDescription(
-            "GE", "General Electric Inc",
-            "Industrial Behmoth (Jet Engines/Heavy Electricals)"
+                "GE", "General Electric Inc",
+                "Industrial Behmoth (Jet Engines/Heavy Electricals)"
         )
         (stocksTradedOnExchange as HashMap<String, CompanyDescription?>)[description.tickerSymbol] = description
         description = CompanyDescription("WALM", "Walmart Inc", "Retail Giant")

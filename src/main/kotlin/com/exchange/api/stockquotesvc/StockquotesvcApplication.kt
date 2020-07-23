@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class StockquotesvcApplication
 
 fun main(args: Array<String>) {
-	runApplication<StockquotesvcApplication>(*args)
+    runApplication<StockquotesvcApplication>(*args)
 }

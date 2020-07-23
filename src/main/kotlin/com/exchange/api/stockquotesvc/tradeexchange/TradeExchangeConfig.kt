@@ -1,6 +1,5 @@
 package com.exchange.api.stockquotesvc.tradeexchange
 
-import com.exchange.api.stockquotesvc.tradeexchange.TradeExchange
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

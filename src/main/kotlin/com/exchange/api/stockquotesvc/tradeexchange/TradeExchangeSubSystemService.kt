@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component
 @Component
 class TradeExchangeSubSystemService @Autowired constructor(private val tradeExchange: TradeExchange) :
         ITradeExchangeService {
-    override fun getTradedCompanyInfoByTickerName(ticker: String?): CompanyDescription? {
+    override fun getTradedCompanyInfoByTickerName(ticker: String?): TradedCompanyDescription? {
         return tradeExchange.lookupTicker(ticker!!)
     }
 
-    override val allTradedCompanyInfo: List<CompanyDescription?>
+    override val allTradedTradedCompanyInfo: List<TradedCompanyDescription?>
         get() = tradeExchange.allTradedTicker()
 
     val exchangeName: String?

@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class StockQuoteGeneratorController @Autowired constructor(private val stockQuoteFacade: StockQuoteFacade) {
 
-    @get:GetMapping("/api/v1/stockquotes")
-    val stockQuotes: List<Any>
-        get() = stockQuoteFacade.allTradedStockPriceInfo()
+    @GetMapping("/api/v1/stockquotes")
+    fun getStockQuotes(): List<StockQuoteDTO>? {
+        return stockQuoteFacade.allTradedStockPriceInfo()
+    }
 
     @GetMapping("/api/v1/stockquote/{ticker}/{exchange}")
     fun getStockQuote(

@@ -5,13 +5,10 @@ import java.util.*
 
 object RandomStockQuoteGenerator {
     fun generate(tickerSymbol: String?): StockQuoteDTO {
-        val stockQuoteDTO = StockQuoteDTO()
         val randomPrice = Random()
-        val currency = Currency.getInstance("USD")
-        stockQuoteDTO.closingPrice = randomPrice.nextFloat()
-        stockQuoteDTO.openningPrice = randomPrice.nextFloat()
-        stockQuoteDTO.currency = currency
-        stockQuoteDTO.tradingDay = LocalDate.now()
+        val stockQuoteDTO = StockQuoteDTO(currency = Currency.getInstance("USD"),
+                closingPrice = randomPrice.nextFloat(),
+                openningPrice = randomPrice.nextFloat(), tradingDay = LocalDate.now(),listedExchange = "NASDAQ")
         return stockQuoteDTO
     }
 }

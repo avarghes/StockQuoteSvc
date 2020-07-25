@@ -1,19 +1,12 @@
 package com.exchange.api.stockquotesvc.stockquote
 
-import com.exchange.api.stockquotesvc.tradeexchange.CompanyDescription
-import java.io.Serializable
+import com.exchange.api.stockquotesvc.tradeexchange.TradedCompanyDescription
 import java.time.LocalDate
 import java.util.*
 
-class StockQuoteDTO : Serializable {
-    var openningPrice = 0f
-    var closingPrice = 0f
-    var listedExchange: String? = null
-    var currency: Currency? = null
-    var tradingDay: LocalDate? = null
-    var description: CompanyDescription? = null
-
-    companion object {
-        private const val serialVersionUID = 4692599796495022505L
-    }
-}
+data class StockQuoteDTO(val openningPrice: Float = 0f,
+                         val closingPrice: Float = 0f,
+                         val listedExchange: String?,
+                         val currency: Currency?,
+                         val tradingDay: LocalDate?,
+                         var descriptionTraded: TradedCompanyDescription? = null)

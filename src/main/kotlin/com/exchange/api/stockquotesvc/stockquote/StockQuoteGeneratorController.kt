@@ -15,8 +15,8 @@ class StockQuoteGeneratorController @Autowired constructor(private val stockQuot
 
     @GetMapping("/api/v1/stockquote/{ticker}/{exchange}")
     fun getStockQuote(
-            @PathVariable("ticker") tickerSymbol: String?,
-            @PathVariable("exchange") exchange: String?
+            @PathVariable("ticker") tickerSymbol: String,
+            @PathVariable("exchange") exchange: String
     ): StockQuoteDTO? {
         return stockQuoteFacade.lastTradedStockPriceInfo(tickerSymbol, exchange)
     }

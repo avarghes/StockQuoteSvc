@@ -9,4 +9,5 @@ data class StockQuoteDTO(val openningPrice: Float = 0f,
                          val listedExchange: String?,
                          val currency: Currency?,
                          val tradingDay: LocalDate?,
-                         var descriptionTraded: TradedCompanyDescription? = null)
+                         var descriptionTraded: TradedCompanyDescription? = null,
+                         val ticker:String)

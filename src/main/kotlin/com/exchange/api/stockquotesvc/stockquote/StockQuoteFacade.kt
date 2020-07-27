@@ -10,7 +10,7 @@ class StockQuoteFacade @Autowired private constructor(
         private val stockQuoteService: IStockQuoteService,
         private val tradeExchangeService: ITradeExchangeService
 ) {
-    fun lastTradedStockPriceInfo(ticker: String?, exchange: String?): StockQuoteDTO? {
+    fun lastTradedStockPriceInfo(ticker: String, exchange: String): StockQuoteDTO? {
         val companyDesc = tradeExchangeService.getTradedCompanyInfoByTickerName(ticker)
         val stockQuoteDTO: StockQuoteDTO? = stockQuoteService.pullStockQuoteByTickerId(ticker)
         stockQuoteDTO?.descriptionTraded = companyDesc
